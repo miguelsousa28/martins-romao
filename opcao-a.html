@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proposta A para Martins & Romão Pinturas: serviços em split view interativa." />
+    <title>Opção A · Martins & Romão Pinturas</title>
+    <link rel="stylesheet" href="v2.css" />
+  </head>
+  <body>
+    <header class="topbar" data-topbar>
+      <div class="shell">
+        <a class="brand" href="#inicio" aria-label="Martins & Romão Pinturas">
+          <img src="assets/mr-pinturas-logo.jpeg" alt="MR Pinturas" />
+          <span>Martins & Romão</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+          <i data-lucide="menu"></i>
+        </button>
+
+        <nav class="nav" data-nav>
+          <a href="#servicos">Serviços</a>
+          <a href="#trabalhos">Trabalhos</a>
+          <a href="#processo">Processo</a>
+          <a href="#contactos">Contactos</a>
+        </nav>
+
+        <button class="quote-button" type="button" data-open-budget>
+          <i data-lucide="send"></i>
+          <span>Orçamento</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <img src="assets/hero-pintura-profissional.jpg" alt="Pintor profissional a pintar uma parede interior" />
+        <div class="shell hero-content">
+          <p class="kicker">Pinturas residenciais e comerciais</p>
+          <h1><span>Acabamentos</span><span>sem ruído.</span></h1>
+          <p class="hero-copy">Interiores, fachadas, capoto e madeiras com preparação cuidada e atenção ao detalhe.</p>
+          <div class="hero-actions">
+            <button class="button primary" type="button" data-open-budget>
+              <i data-lucide="message-circle"></i>
+              <span>Pedir orçamento</span>
+            </button>
+            <a class="button ghost" href="#trabalhos">
+              <i data-lucide="image"></i>
+              <span>Ver trabalhos</span>
+            </a>
+          </div>
+          <div class="mini-proof">
+            <span>Mafra e Ericeira</span>
+            <span>Casas e comércio</span>
+            <span>Capoto e fachadas</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="servicos">
+        <div class="shell">
+          <span class="option-note">Opção A · split view</span>
+          <div class="section-head">
+            <div>
+              <p class="kicker">Serviços</p>
+              <h2>Escolhe o serviço. O detalhe muda ao lado.</h2>
+            </div>
+            <p>Uma abordagem mais editorial e premium: pouca informação visível, imagem forte e detalhes curtos só quando o cliente clica.</p>
+          </div>
+
+          <div class="split-services">
+            <div class="service-menu">
+              <button class="service-tab is-active" type="button" data-service-tab="pinturas">
+                <span>01</span>
+                <span><strong>Pinturas</strong><small>Interior, exterior, comercial</small></span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+              <button class="service-tab" type="button" data-service-tab="capoto">
+                <span>02</span>
+                <span><strong>Capoto</strong><small>Isolamento e acabamento</small></span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+              <button class="service-tab" type="button" data-service-tab="fachadas">
+                <span>03</span>
+                <span><strong>Fachadas</strong><small>Restauro e proteção</small></span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+              <button class="service-tab" type="button" data-service-tab="telhados">
+                <span>04</span>
+                <span><strong>Telhados</strong><small>Renovação exterior</small></span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+              <button class="service-tab" type="button" data-service-tab="decks">
+                <span>05</span>
+                <span><strong>Decks</strong><small>Madeiras e manutenção</small></span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+              <button class="service-tab" type="button" data-service-tab="comercial">
+                <span>06</span>
+                <span><strong>Comercial</strong><small>Lojas, escritórios e hotéis</small></span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+
+            <article class="split-panel">
+              <div class="split-media">
+                <img src="assets/work-DXXm5PfDOgO.jpg" alt="Pinturas" data-service-image />
+              </div>
+              <div class="split-detail">
+                <p class="kicker">Detalhe</p>
+                <h3 data-service-title>Pinturas</h3>
+                <p data-service-copy>
+                  Interiores e exteriores com preparação cuidada, acabamento uniforme e uma abordagem limpa para casas,
+                  prédios e espaços comerciais.
+                </p>
+                <div class="split-points" data-service-points>
+                  <span>Interiores</span>
+                  <span>Exteriores</span>
+                  <span>Comercial</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft" id="trabalhos">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Trabalhos</p>
+              <h2>Obras reais, seleção mais curta.</h2>
+            </div>
+            <p>A galeria fica mais limpa: uma imagem grande e quatro apoios, em vez de uma grelha demasiado carregada.</p>
+          </div>
+
+          <div class="work-grid">
+            <figure>
+              <img src="assets/work-CuC6z60IKmb.jpg" alt="Prédio em Ribeira d'Ilhas" />
+              <figcaption>Fachada</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/work-CsEur_0IxLc.jpg" alt="Moradia com capoto" />
+              <figcaption>Capoto</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/work-CviFJpmIue0.jpg" alt="Pintura de telhado" />
+              <figcaption>Telhado</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/work-Cn4QuQetFvQ.jpg" alt="Deck em Cascais" />
+              <figcaption>Deck</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/work-CtzNfUeosX1.jpg" alt="Restauro de casa antiga" />
+              <figcaption>Restauro</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" id="processo">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Processo</p>
+              <h2>Simples, claro e sem complicar.</h2>
+            </div>
+          </div>
+          <div class="process">
+            <article><span>01</span><h3>Avaliação</h3><p>Perceber o espaço, superfícies e objetivo.</p></article>
+            <article><span>02</span><h3>Preparação</h3><p>Corrigir, proteger e preparar antes da tinta.</p></article>
+            <article><span>03</span><h3>Pintura</h3><p>Aplicação com acabamento limpo e consistente.</p></article>
+            <article><span>04</span><h3>Entrega</h3><p>Revisão final e espaço pronto a usar.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section slim" id="contactos">
+        <div class="shell contact-band">
+          <div>
+            <p class="kicker">Zona de atuação</p>
+            <h2>Mafra, Ericeira, Lisboa, Cascais e arredores.</h2>
+            <div class="zones">
+              <span>Mafra</span><span>Santo Isidoro</span><span>Ericeira</span><span>Ribeira d'Ilhas</span>
+              <span>Lisboa</span><span>Cascais</span><span>São Domingos de Rana</span>
+            </div>
+          </div>
+          <button class="button dark" type="button" data-open-budget>
+            <i data-lucide="clipboard-check"></i>
+            <span>Pedir orçamento</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <span>Martins & Romão, Lda</span>
+        <a href="https://www.instagram.com/mrpinturaslda/" target="_blank" rel="noreferrer">@mrpinturaslda</a>
+      </div>
+    </footer>
+
+    <button class="floating-budget" type="button" data-open-budget>
+      <i data-lucide="message-circle"></i>
+      <span>Orçamento</span>
+    </button>
+
+    <div class="modal" aria-hidden="true" data-modal>
+      <div class="modal-backdrop" data-close-budget></div>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="budget-title">
+        <button class="modal-close" type="button" aria-label="Fechar" data-close-budget><i data-lucide="x"></i></button>
+        <p class="kicker">Orçamento</p>
+        <h2 id="budget-title">Contacto direto.</h2>
+        <div class="contact-list">
+          <div class="contact-row">
+            <div><strong>Douglas Martins</strong><span>913 110 464</span></div>
+            <a href="tel:+351913110464">Ligar</a>
+            <a class="whatsapp" href="https://wa.me/351913110464" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+          <div class="contact-row">
+            <div><strong>Felipe Romão</strong><span>937 793 915</span></div>
+            <a href="tel:+351937793915">Ligar</a>
+            <a class="whatsapp" href="https://wa.me/351937793915" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+          <div class="contact-row">
+            <div><strong>Email</strong><span>MartinsRomao.lda@gmail.com</span></div>
+            <a href="mailto:MartinsRomao.lda@gmail.com">Enviar</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="v2.js"></script>
+  </body>
+</html>
