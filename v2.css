@@ -717,8 +717,7 @@ h3 {
 
 .work-grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr 0.8fr;
-  grid-template-rows: repeat(2, 240px);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -726,8 +725,10 @@ h3 {
   position: relative;
   margin: 0;
   overflow: hidden;
+  aspect-ratio: 4 / 5;
   border-radius: 8px;
   background: #d8dcdf;
+  box-shadow: 0 18px 44px rgba(18, 22, 26, 0.08);
 }
 
 .work-grid figure::after {
@@ -739,10 +740,6 @@ h3 {
     linear-gradient(135deg, rgba(32, 176, 224, 0.16), transparent 45%, rgba(240, 48, 80, 0.18));
   opacity: 0;
   transition: opacity 220ms ease;
-}
-
-.work-grid figure:first-child {
-  grid-row: span 2;
 }
 
 .work-grid img {
@@ -1053,11 +1050,7 @@ svg {
   }
 
   .work-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .work-grid figure:first-child {
-    grid-column: span 2;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .process {
@@ -1130,20 +1123,12 @@ svg {
   .mini-proof,
   .card-services,
   .split-points,
-  .work-grid,
   .process {
     grid-template-columns: 1fr;
   }
 
   .work-grid {
-    grid-template-rows: none;
-  }
-
-  .work-grid figure,
-  .work-grid figure:first-child {
-    grid-column: auto;
-    grid-row: auto;
-    aspect-ratio: 4 / 5;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .service-tab {
