@@ -1,39 +1,39 @@
 const serviceData = {
   pinturas: {
     title: "Pinturas",
-    copy: "Interiores e exteriores com preparação cuidada, acabamento uniforme e uma abordagem limpa para casas, prédios e espaços comerciais.",
-    image: "assets/work-DXXm5PfDOgO.jpg",
+    copy: "Interiores claros, renovacoes completas e acabamento uniforme para casas, apartamentos e espacos de uso diario.",
+    image: "assets/client-photos/07.png",
     points: ["Interiores", "Exteriores", "Comercial"],
   },
   capoto: {
     title: "Capoto e isolamento",
-    copy: "Soluções de isolamento térmico exterior com barramentos, preparação e acabamento final alinhado com o imóvel.",
-    image: "assets/work-CsEur_0IxLc.jpg",
+    copy: "Capoto, barramentos e acabamento final em obra real, com foco na protecao exterior e numa leitura visual limpa.",
+    image: "assets/client-photos/15.png",
     points: ["Capoto", "Barramentos", "Acabamento"],
   },
   fachadas: {
     title: "Fachadas e restauro",
-    copy: "Intervenções em fachadas, prédios antigos e moradias, com foco na recuperação da superfície antes da pintura.",
-    image: "assets/work-CtzNfUeosX1.jpg",
-    points: ["Fachadas", "Restauro", "Proteção"],
+    copy: "Fachadas, moradias e exteriores em renovacao, com detalhe de obra e presenca forte da marca no local.",
+    image: "assets/client-photos/13.png",
+    points: ["Fachadas", "Restauro", "Protecao"],
   },
-  telhados: {
-    title: "Telhados",
-    copy: "Pintura e renovação visual de telhados e elementos exteriores sujeitos a sol, chuva e maresia.",
-    image: "assets/work-CviFJpmIue0.jpg",
-    points: ["Telhados", "Exterior", "Renovação"],
+  exterior: {
+    title: "Exterior",
+    copy: "Renovacao exterior com foco em moradias, volumes brancos, frentes limpas e consistencia no acabamento final.",
+    image: "assets/client-photos/10.png",
+    points: ["Moradias", "Obra nova", "Renovacao"],
   },
   decks: {
     title: "Decks e madeiras",
-    copy: "Tratamento e pintura de decks, madeiras exteriores e zonas de uso intenso, com acabamento resistente.",
-    image: "assets/work-Cn4QuQetFvQ.jpg",
-    points: ["Decks", "Madeiras", "Manutenção"],
+    copy: "Decks, passagens exteriores e zonas de piscina com um acabamento quente, cuidado e visualmente marcante.",
+    image: "assets/client-photos/03.png",
+    points: ["Decks", "Madeiras", "Manutencao"],
   },
   comercial: {
-    title: "Espaços comerciais",
-    copy: "Pintura de lojas, escritórios, restaurantes e hotéis com planeamento para reduzir interrupções.",
-    image: "assets/work-CuC6z60IKmb.jpg",
-    points: ["Lojas", "Escritórios", "Hotéis"],
+    title: "Comercial",
+    copy: "Espacos comerciais, interiores de representacao e zonas tecnicas com pintura limpa e leitura contemporanea.",
+    image: "assets/client-photos/08.png",
+    points: ["Lojas", "Escritorios", "Hoteis"],
   },
 };
 
