@@ -753,7 +753,8 @@ h3 {
 }
 
 .project-spotlight-media img {
-  min-height: 520px;
+  position: absolute;
+  inset: 0;
   object-position: center 44%;
 }
 
@@ -1225,8 +1226,7 @@ svg {
     grid-template-columns: 1fr;
   }
 
-  .project-spotlight-media,
-  .project-spotlight-media img {
+  .project-spotlight-media {
     min-height: 500px;
   }
 
@@ -1329,8 +1329,7 @@ svg {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .project-spotlight-media,
-  .project-spotlight-media img {
+  .project-spotlight-media {
     min-height: 420px;
   }
 
