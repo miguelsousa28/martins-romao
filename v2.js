@@ -51,6 +51,9 @@ const detailTitle = document.querySelector("[data-service-title]");
 const detailCopy = document.querySelector("[data-service-copy]");
 const detailImage = document.querySelector("[data-service-image]");
 const detailPoints = document.querySelector("[data-service-points]");
+const buildingToggle = document.querySelector("[data-building-toggle]");
+const buildingToggleText = document.querySelector("[data-building-toggle-text]");
+const buildingGallery = document.querySelector("[data-building-gallery]");
 
 document.body.classList.add("enhanced");
 
@@ -145,6 +148,14 @@ cardButtons.forEach((card) => {
     card.style.setProperty("--card-rotate-x", "0deg");
     card.style.setProperty("--card-rotate-y", "0deg");
   });
+});
+
+buildingToggle?.addEventListener("click", () => {
+  const willOpen = buildingGallery.hidden;
+
+  buildingGallery.hidden = !willOpen;
+  buildingToggle.setAttribute("aria-expanded", String(willOpen));
+  buildingToggleText.textContent = willOpen ? "Mostrar menos fotos" : "Ver galeria completa";
 });
 
 openBudgetButtons.forEach((button) => {
