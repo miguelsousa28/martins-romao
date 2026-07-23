@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
 body {
@@ -717,76 +718,64 @@ h3 {
 
 .project-spotlight {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
-  min-height: 520px;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 8px;
+  scroll-margin-top: 96px;
 }
 
-.project-spotlight-media {
+.project-comparison-feature {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  min-height: 560px;
+  padding: 8px;
+  background: #eceff1;
+}
+
+.comparison-frame {
   position: relative;
-  min-height: 520px;
+  min-width: 0;
   margin: 0;
   overflow: hidden;
   background: #d8dcdf;
+  border-radius: 5px;
 }
 
-.project-spotlight-media::after,
-.building-preview-grid figure::after,
-.building-extra-grid figure::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 48%, rgba(15, 17, 19, 0.62));
-  pointer-events: none;
-}
-
-.project-spotlight-media img,
-.building-preview-grid img,
-.building-extra-grid img {
+.comparison-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.project-spotlight-media img {
-  position: absolute;
-  inset: 0;
-  object-position: center 44%;
+.comparison-frame:hover img {
+  transform: scale(1.025);
 }
 
-.project-spotlight-media:hover img,
-.building-preview-grid figure:hover img,
-.building-extra-grid figure:hover img {
-  transform: scale(1.035);
-}
-
-.project-spotlight-media figcaption {
+.comparison-label {
   position: absolute;
-  z-index: 1;
-  right: 24px;
-  bottom: 24px;
-  left: 24px;
+  top: 14px;
+  left: 14px;
+  padding: 7px 11px;
   color: #fff;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(15, 17, 19, 0.16);
 }
 
-.project-spotlight-media figcaption span,
-.project-spotlight-media figcaption strong {
-  display: block;
+.comparison-label-before {
+  background: var(--red);
 }
 
-.project-spotlight-media figcaption span {
-  margin-bottom: 3px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.88rem;
-  font-weight: 800;
-}
-
-.project-spotlight-media figcaption strong {
-  font-size: 1.35rem;
+.comparison-label-after {
+  background: var(--blue);
 }
 
 .project-spotlight-content {
@@ -820,55 +809,61 @@ h3 {
   margin-top: 28px;
 }
 
-.gallery-toggle {
-  color: var(--ink);
+.comparison-cases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.comparison-case {
+  overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
-}
-
-.gallery-toggle:hover {
-  color: #fff;
-  background: var(--ink);
-  border-color: var(--ink);
-}
-
-.building-preview-grid,
-.building-extra-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 14px;
-}
-
-.building-extra-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  animation: gallery-in 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.building-extra-grid[hidden] {
-  display: none;
-}
-
-.building-preview-grid figure,
-.building-extra-grid figure {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  aspect-ratio: 4 / 5;
   border-radius: 8px;
-  background: #d8dcdf;
 }
 
-.building-preview-grid figcaption,
-.building-extra-grid figcaption {
-  position: absolute;
-  z-index: 1;
-  right: 12px;
-  bottom: 12px;
-  left: 12px;
-  color: #fff;
-  font-size: 0.86rem;
-  font-weight: 850;
+.comparison-case-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 112px;
+  padding: 20px 22px;
+}
+
+.comparison-case-head span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.comparison-case-head h4 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.comparison-case-head p {
+  max-width: 25ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.comparison-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 0 4px 4px;
+}
+
+.comparison-pair .comparison-frame {
+  aspect-ratio: 4 / 5;
 }
 
 .portfolio-divider {
@@ -886,18 +881,6 @@ h3 {
   height: 1px;
   flex: 1;
   background: var(--line);
-}
-
-@keyframes gallery-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .work-grid {
@@ -1226,8 +1209,8 @@ svg {
     grid-template-columns: 1fr;
   }
 
-  .project-spotlight-media {
-    min-height: 500px;
+  .project-comparison-feature {
+    min-height: 520px;
   }
 
   .section-head {
@@ -1240,14 +1223,6 @@ svg {
   }
 
   .work-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .building-preview-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .building-extra-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -1269,6 +1244,10 @@ svg {
   .hero-copy {
     max-width: 420px;
     font-size: 1rem;
+  }
+
+  .comparison-cases {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1329,8 +1308,10 @@ svg {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .project-spotlight-media {
-    min-height: 420px;
+  .project-comparison-feature {
+    min-height: 430px;
+    gap: 5px;
+    padding: 5px;
   }
 
   .project-spotlight-content {
@@ -1341,8 +1322,23 @@ svg {
     font-size: 2.05rem;
   }
 
-  .building-extra-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .comparison-label {
+    top: 10px;
+    left: 10px;
+    padding: 6px 8px;
+    font-size: 0.66rem;
+  }
+
+  .comparison-case-head {
+    display: block;
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .comparison-case-head p {
+    max-width: none;
+    margin-top: 8px;
+    text-align: left;
   }
 
   .portfolio-divider {
@@ -1387,8 +1383,15 @@ svg {
 
   .floating-budget {
     right: 16px;
-    left: 16px;
+    left: auto;
+    width: 52px;
+    min-width: 52px;
+    padding: 0;
     justify-content: center;
+  }
+
+  .floating-budget span {
+    display: none;
   }
 }
 
